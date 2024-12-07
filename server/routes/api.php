@@ -10,6 +10,11 @@ use App\Http\Controllers\DiscussionController;
 use App\Http\Controllers\VerificationController;
 use App\Mail\TestEmail;
 
+// for testing purposes the route hello-world
+Route::get('/hello-world', function () {
+    return response()->json(['message' => 'Hello World!']);
+});
+
 
 // Authentication routes for alumni
 Route::post('login', [AuthController::class, 'login']);
